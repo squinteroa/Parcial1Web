@@ -6,3 +6,5 @@ const botonesOperadores = document.querySelectorAll('.operador');/*hace referenc
 
 const calculadora = new Calculadora();
 console.log(Calculadora.sumar(2,3))
+console.log(Calculadora.sumar(2,3))
+console.log(Calculadora.sumar(2,3))
