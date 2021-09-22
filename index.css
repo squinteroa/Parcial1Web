@@ -1,0 +1,72 @@
+*{
+    font-family: 'fraunces', serif;
+    color: white;
+}
+
+body{
+    margin: 0; /*margen de la pestaña*/
+    background-color: navy;
+}
+
+.container{
+    display: flex;
+    justify-content: center; /*poner el contenido en el centro*/
+    align-items: center; /*alinear en el centro como si fuera X y Y*/
+    height: 100vh; /*baja el apartado a 100 posiciones de Y hacia abajo*/
+}
+
+.calculadora{
+    display: grid; /*colocar una grulla*/
+    grid-template-columns: repeat(4,75px);/*columnas*/
+    grid-template-rows: 160px repeat(5,75px);/*filas*/
+    background-color: darkred;/*color*/
+    padding: 15px;/*para que lo botones no queden tan pegados a los bordes*/
+    border-radius: 32px;/*le da el aspecto redondeado*/
+    box-shadow: 15px 10px 0px 5px #00000033;/*agregar sombra al contorno de un objeto*/
+}
+
+button{
+    cursor: pointer;
+    margin: 5px;/*margen de 5 pixeles*/
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    background-color: darkred;
+    box-shadow: 5px 5px 10px -3px #00000044, -5px -5px 15px 3px #00ffc11f;/*despues de la coma se agregar la sombra del otro lado*/
+}
+
+button:active{
+    background-color:maroon;/*cambia el color al hacer click sobre el boton*/
+}
+
+button:focus{
+    outline: none;
+}
+
+.display{
+    grid-column: 1 / -1;/*ancho al display*/
+    padding: 19px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color:#303030;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+}
+
+#valor-actual{
+    font-size: 1.5em;/*tamaño del valor de arriba*/
+}
+
+#valor-anterior{
+    font-size: 2em;
+}
+
+.col-2{
+    grid-column: span 2;/*espande la columna a un tamaño determinado*/
+}
