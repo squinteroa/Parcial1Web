@@ -1,5 +1,5 @@
 *{
-    font-family: 'fraunces', serif;
+    font-family: 'Fraunces', serif;
     color: white;
 }
 
@@ -44,9 +44,13 @@ button:focus{
     outline: none;
 }
 
+.col-2{
+    grid-column: span 2;/*espande la columna a un tamaño determinado*/
+}
+
 .display{
     grid-column: 1 / -1;/*ancho al display*/
-    padding: 19px;
+    padding: 16px;
     display: flex;
     margin: 10px 10px 20px;
     flex-direction: column;
@@ -65,8 +69,4 @@ button:focus{
 
 #valor-anterior{
     font-size: 2em;
-}
-
-.col-2{
-    grid-column: span 2;/*espande la columna a un tamaño determinado*/
 }
