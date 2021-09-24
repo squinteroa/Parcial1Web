@@ -6,6 +6,36 @@ class Display{
         this.tipoOperacion = undefined;
         this.valorActual = '';
         this.valorAnterior = '';
+        this.signos = {
+            sumar: '+',
+            dividir:'/',
+            multiplicar:'x',
+            restar:'-',
+            porcentaje:'%',
+        }
+    }
+
+    computar(tipo){
+        this.tipoOperacion !== 'igual' && this.calcular();
+        this.tipoOperacion = tipo;
+        this.valorAnterior = this.valorActual || this.valorAnterior;
+        this.valorActual = '';
+        this.imprimirValores();
+    }
+
+    calcular(){
+        const valorAnterior = parseFloat(this.valorAnterior);
+        const valorActual = parseFloat(this.valorActual);
+
+        if(isNaN(valorActual) || isNaN(valorAnterior)) return
+        this.valorActual = this.calculador[this.tipoOperacion](valorAnterior,valorActual)
+    }
+
+    borrarTodo(){
+        this.valorActual = '';
+        this.valorAnterior = '';
+        this.tipoOperacion = undefined;
+        this.imprimirValores();
     }
 
     borrar() {

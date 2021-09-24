@@ -1,5 +1,5 @@
 *{
-    font-family: 'Fraunces', serif;
+    font-family: 'Time New Roman', serif;
     color: white;
 }
 
@@ -26,7 +26,7 @@ body{
 }
 
 button{
-    cursor: pointer;
+    cursor: pointer;/*tipo de cursor*/
     margin: 5px;/*margen de 5 pixeles*/
     padding: 0;
     border-radius: 32px;
